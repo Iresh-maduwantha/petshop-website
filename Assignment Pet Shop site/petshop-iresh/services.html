@@ -1,0 +1,241 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+       <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IM pet shop</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+         <script type="text/javascript" src="script.js" defer></script>
+        <style>
+
+          /* Section Styling */
+#services {
+    padding: 60px 20px;
+    background-color: #f3f4f6;
+    text-align: center;
+}
+
+/* Heading Style */
+#services .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+#services .heading span {
+    color: #78df17;
+}
+
+/* Container Styling */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Box Styling */
+.box {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    text-align: center;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.box i {
+    font-size: 3rem;
+    color: #ffa723;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.box:hover i {
+    color: #333;
+}
+
+/* Service Title */
+.box h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Read More Link */
+.box a {
+    display: inline-block;
+    color: #ff5e57;
+    font-size: 1rem;
+    margin-top: 15px;
+    text-decoration: none;
+    border: 1px solid #ff5e57;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.box a:hover {
+    background-color: #ff5e57;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+
+
+        </style>
+    
+    </head>
+    <body>
+      <header>
+
+        <div class="header">
+            <a href="#" class="logo">
+              <i class="fas fa-paw">&nbsp;</i>Welcome Pet Shop
+            </a>
+          
+            <nav class="navbar">
+              <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i> <!-- Hamburger icon for mobile view -->
+              </div>
+              <div class="nav-menu" id="nav-links">
+                <a href="home.html">Home</a>
+               
+                <a href="services.html">Services</a>
+              </div>
+              <div class="icons">
+                <a href="details.php" class="fas fa-shopping-cart"></a>
+                <a href="login.html" class="fas fa-user"></a>
+              </div>
+            </nav>
+          </div>
+      </header>
+    
+     
+       
+
+
+      <section class="services" id="services">
+
+        <h1 class="heading">our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+            <i class="fas fa-dog"></i>
+            <h3>DOG Boarding</h3>
+            <a href="services-dateils.html">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-cat"></i>
+            <h3>cat Boarding</h3>
+            <a href="services-dateils.html">read more</a>
+        </div>
+
+
+        <div class="box">
+            <i class="fas fa-bath"></i>
+            <h3>grooming</h3>
+            <a href="services-dateils.html">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-drumstick-bite"></i>
+            <h3>healthy meal</h3>
+            <a href="services-dateils.html">read more</a>
+        </div>
+
+
+        <div class="box">
+            <i class="fas fa-baseball-ball"></i>
+            <h3>activity</h3>
+            <a href="services-dateils.html">read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>health care</h3>
+            <a href="services-dateils.html">read more</a>
+        </div>
+
+
+      </section>
+
+      
+
+
+
+
+      <script src="script.js" defer></script>
+    </body>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="home.html">
+                        <img src="img/logo.png" alt="Traveller Logo">
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Street, Colombo, Sri Lanka</li>
+                    <li><i class="fas fa-phone-alt"></i> +94 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> support@traveller.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Traveller. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+    </html>
+    
+    
+    

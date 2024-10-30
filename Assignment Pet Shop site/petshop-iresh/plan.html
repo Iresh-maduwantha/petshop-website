@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Plan</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    /* General Styling */
+.Plan .body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f7f8;
+}
+
+.Plan {
+    padding: 20px;
+    text-align: center;
+}
+
+.Plan h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.Plan h1 span {
+    color: #ff7a18;
+}
+
+/* Plan Cards Layout */
+.plans {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Plan Card Elements */
+.plan-card h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.plan-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.plan-card ul li {
+    font-size: 1rem;
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.plan-card ul li:last-child {
+    border-bottom: none;
+}
+
+.price {
+    font-size: 2rem;
+    color: #ff7a18;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff7a18;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e06600;
+    transform: translateY(-3px);
+}
+
+button:focus {
+    outline: 2px solid #ff7a18;
+    outline-offset: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="header">
+      
+          <a href="#" class="logo"> <i class="fas fa-paw"></i>welcome to IM pet shop</a>
+      
+          <nav class="navbar">
+            <a href="home.html">home</a>
+            <a href="shop.php">shop</a>
+            <a href="services.html">services</a>
+          
+      
+          <div class="icons">
+            <a href="details.php" class="fas fa-shopping-cart"></a>
+            <a href="login.html" class="fas fa-user"></a>
+          </div>
+          </nav>
+          </div>
+
+    </header>
+
+
+
+    <section class="Plan">
+    <div class="container">
+        <h1>Choose a <span>Plan</span></h1>
+        <div class="plans">
+            <div class="plan-card">
+                <h2>Plan A</h2>
+                <ul>
+                    <li>Pet Room</li>
+                    <li>Pet Grooming</li>
+                    <li>Pet Exercise</li>
+                    <li>Pet Meals</li>
+                </ul>
+                <div class="price">$50</div>
+                <button>Select Plan A</button>
+            </div>
+            <div class="plan-card">
+                <h2>Plan B</h2>
+                <ul>
+                    <li>Pet Room</li>
+                    <li>Pet Grooming</li>
+                    <li>Pet Exercise</li>
+                    <li>Pet Meals</li>
+                </ul>
+                <div class="price">$350</div>
+                <button>Select Plan B</button>
+            </div>
+            <div class="plan-card">
+                <h2>Plan C</h2>
+                <ul>
+                    <li>Pet Room</li>
+                    <li>Pet Grooming</li>
+                    <li>Pet Exercise</li>
+                    <li>Pet Meals</li>
+                </ul>
+                <div class="price">$650</div>
+                <button>Select Plan C</button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

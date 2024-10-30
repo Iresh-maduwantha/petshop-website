@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - IM Pet Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        .about-content {
+            height: 100%;
+            background-image: url('https://i.ibb.co/yBWN31w/1231075.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: #9fed04;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #9fed04;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            max-width: 800px;
+        }
+
+        .mission-vision {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px 0;
+            border-top: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .mission, .vision {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            margin: 0 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .mission h3, .vision h3 {
+            color: #b2dd15;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .features {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+
+        .features li {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .features li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #ff6600;
+        }
+
+        .team {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            max-width: 1200px;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+        }
+
+        .team-card img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .team-card h4 {
+            margin: 10px 0;
+            color: #ff6600;
+            font-size: 1.5em;
+        }
+
+        .home-button {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 24px;
+            background-color: #ff6600;
+            color: #fff;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #cc5200;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .mission-vision {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mission, .vision {
+                margin: 10px 0;
+                width: 90%;
+            }
+
+            .team-members {
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="about-content">
+        
+        <div class="mission-vision">
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>To provide high-quality pet products and services that enrich the lives of pets and their owners.</p>
+            </div>
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To be the most trusted pet shop and care center, recognized for our dedication to pet health, happiness, and community.</p>
+            </div>
+        </div>
+        
+        <h2>Why Choose Us</h2>
+        <ul class="features">
+            <li>Top-notch pet supplies and food</li>
+            <li>Experienced, pet-loving staff</li>
+            <li>Safe and caring pet care facilities</li>
+            <li>Dedicated customer support</li>
+        </ul>
+
+        <a href="home.html" class="home-button">
+            <i class="fas fa-home"></i> Go to Home
+        </a> 
+    </section>
+
+</body>
+</html>

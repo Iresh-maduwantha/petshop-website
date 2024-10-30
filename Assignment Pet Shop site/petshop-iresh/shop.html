@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Shop</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filters button, .filters select {
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #e7f7ff;
+  color: #007bff;
+  font-weight: bold;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.filters button:hover, .filters select:hover {
+  background-color: #cceeff;
+  border-color: #66bbff;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 0 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Card */
+.product-card {
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Product Price */
+.product-price {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Quantity Input */
+.product-quantity {
+  width: 70px;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  transition: border-color 0.3s;
+}
+
+.product-quantity:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+  <header>
+
+    <div class="header">
+  
+      <a href="#" class="logo"> <i class="fas fa-paw"></i> welcome  IM pet shop</a>
+  
+      <nav class="navbar">
+        <a href="home.html">home</a>
+        <a href="shop.php">shop</a>
+        <a href="services.html">services</a>
+      
+  
+      <div class="icons">
+        <a href="details.php" class="fas fa-shopping-cart"></a>
+        <a href="login.html" class="fas fa-user"></a>
+      </div>
+      </nav>
+      </div>
+
+  </header>
+
+  
+
+    <div id="products-section" class="products-grid">
+        <div class="product-card">
+            <img src="img\dog-food1.jpg" alt="Dog Food">
+            <h3>Dog Food</h3>
+            <div class="product-price">$10</div>
+            <input type="number" class="product-quantity" value="1" min="1">
+            <button class="add-to-cart-btn" data-product-id="1">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img\dog-food1.jpg" alt="Dog Food">
+            <h3>Dog Food</h3>
+            <div class="product-price">$10</div>
+            <input type="number" class="product-quantity" value="1" min="1">
+            <button class="add-to-cart-btn" data-product-id="2">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img\dog-food1.jpg" alt="Dog Food">
+            <h3>Dog Food</h3>
+            <div class="product-price">$10</div>
+            <input type="number" class="product-quantity" value="1" min="1">
+            <button class="add-to-cart-btn" data-product-id="3">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img\dog-food1.jpg" alt="Dog Food">
+            <h3>Dog Food</h3>
+            <div class="product-price">$10</div>
+            <input type="number" class="product-quantity" value="1" min="1">
+            <button class="add-to-cart-btn" data-product-id="4">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img\dog-food1.jpg" alt="Dog Food">
+            <h3>Dog Food</h3>
+            <div class="product-price">$10</div>
+            <input type="number" class="product-quantity" value="1" min="1">
+            <button class="add-to-cart-btn" data-product-id="5">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img\dog-food1.jpg" alt="iresh food">
+            <h3>iresh food</h3>
+            <div class="product-price">$50</div>
+            <input type="number" class="product-quantity" value="1" min="1">
+            <button class="add-to-cart-btn" data-product-id="6">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                const productId = event.target.getAttribute('data-product-id');
+                const quantityInput = event.target.previousElementSibling; // Get the input element before the button
+                const quantity = quantityInput.value; // Get the quantity value
+
+                // Redirect to PHP script to add to cart
+                window.location.href = `?action=add&id=${productId}&quantity=${quantity}`;
+            });
+        });
+    </script>
+</body>
+
+
+footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="homepage.html">
+                    <img src="img/logo.png" alt="Traveller Logo">
+                </a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="news.html">FAQs</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Information</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Street, Colombo, Sri Lanka</li>
+                <li><i class="fas fa-phone-alt"></i> +94 123 456 789</li>
+                <li><i class="fas fa-envelope"></i> support@traveller.com</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Traveller. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

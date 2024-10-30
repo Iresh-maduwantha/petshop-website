@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Register</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'DM Sans', sans-serif;
+            background-image: url('https://i.ibb.co/vXMVCQP/images.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .signup-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            padding: 2rem;
+        }
+
+        .signup-form {
+            background-color: rgba(51, 50, 50, 0.5);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .signup-form h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .signup-form input {
+            width: 92%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #e55d00;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-form button:hover {
+            background-color: #eba742;
+        }
+
+        .signup-form p {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .signup-form a {
+            color: #eba742;
+            text-decoration: none;
+        }
+
+        .signup-form a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .signup-section {
+                padding: 1rem;
+            }
+
+            .signup-form {
+                padding: 1rem;
+                max-width: 100%;
+            }
+
+            .signup-form h2 {
+                font-size: 1.5rem;
+            }
+
+            .signup-form input {
+                font-size: 0.9rem;
+            }
+
+            .signup-form button {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .signup-section {
+                padding: 2rem;
+            }
+
+            .signup-form {
+                max-width: 300px;
+                padding: 2rem;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registerForm');
+            const fullNameInput = document.getElementById('registerFullName');
+            const emailInput = document.getElementById('registerEmail');
+            const passwordInput = document.getElementById('registerPassword');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                clearErrorMessages();
+
+                let valid = true;
+                if (fullNameInput.value.trim() === '') {
+                    showError(fullNameInput, 'Please enter your full name.');
+                    valid = false;
+                }
+                if (!validateEmail(emailInput.value)) {
+                    showError(emailInput, 'Please enter a valid email address.');
+                    valid = false;
+                }
+                if (!validatePassword(passwordInput.value)) {
+                    showError(passwordInput, 'Password must be at least 6 characters long.');
+                    valid = false;
+                }
+                if (passwordInput.value !== confirmPasswordInput.value) {
+                    showError(confirmPasswordInput, 'Passwords do not match.');
+                    valid = false;
+                }
+
+                if (valid) {
+                    form.submit();  // Submit the form if everything is valid
+                }
+            });
+
+            function validateEmail(email) {
+                const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            function validatePassword(password) {
+                return password.length >= 6;
+            }
+
+            function showError(input, message) {
+                const error = document.createElement('div');
+                error.className = 'error';
+                error.innerText = message;
+                input.parentElement.appendChild(error);
+            }
+
+            function clearErrorMessages() {
+                const errors = document.querySelectorAll('.error');
+                errors.forEach(function(error) {
+                    error.remove();
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <section class="signup-section">
+        <div class="signup-form">
+            <h2>Signup</h2>
+            <form id="signupForm" action="signup.php" method="POST">
+                <input type="text" id="signupFullName" name="fullname" placeholder="Full Name" required>
+                <input type="email" id="signupEmail" name="email" placeholder="Email Address" required>
+                <input type="password" id="signupPassword" name="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" name="confirmpassword" placeholder="Confirm Password" required>
+                <button type="submit">Signup</button>
+            </form>
+            
+            <br>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IM pet shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     
+     <style>
+     
+    .about {
+    display: flex; 
+    padding: 20px;
+    margin-bottom: 20px; 
+    background: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.about .image {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.about .image img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+.about .content {
+    flex: 2; 
+}
+
+.about h3 {
+    font-size: 16px; 
+    color: #333; 
+    margin: 0; 
+    line-height: 1.6; 
+}
+
+.about .btn {
+    display: inline-block; 
+    padding: 5px; 
+    background: #4CAF50; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    transition: background 0.3s, transform 0.2s; 
+    margin-top: 10px; 
+}
+
+.about .btn:hover {
+    background: #45a049; 
+    transform: scale(1.05); 
+}
+
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .about .image {
+        margin-right: 0; 
+        margin-bottom: 15px; 
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.pricing-section {
+    text-align: center;
+    margin: 40px;
+    padding: 20px;
+}
+
+.pricing-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pricing-section h2 span {
+    color: #ff6b00;
+    font-weight: bold;
+}
+
+
+.pricing-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.plan-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.plan-header .icon {
+    font-size: 2.5em;
+    color: #ff6b00;
+}
+
+.plan-header h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+.plan-details {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan-details li {
+    font-size: 1.2em;
+    color: #555;
+    margin: 8px 0;
+}
+
+
+.plan-price {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .pricing-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 90%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.services-section {
+    padding: 60px 20px;
+    background-color: #fff; /* Light background for contrast */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centered text */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between; /* Space out the services */
+    flex-wrap: wrap;
+}
+
+.service {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures no overflow */
+    margin: 10px;
+    flex: 1;
+    min-width: 280px; /* Minimum width for responsiveness */
+    max-width: 350px; /* Control max width */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.service:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.service-image {
+    position: relative;
+}
+
+.service-image img {
+    width: 100%; /* Make image fill the container */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    display: block; /* Remove bottom space */
+}
+
+.service-details {
+    position: absolute; /* Positioning the text over the image */
+    bottom: 0; /* Stick to the bottom */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent background for readability */
+    color: #fff; /* Text color */
+    padding: 20px;
+    text-align: center; /* Center text */
+}
+
+.service h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Gold color for headings */
+}
+
+.service p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #fff; /* White for readability */
+}
+
+.price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff6600; /* Orange for price */
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.service-btn {
+    padding: 15px 30px;
+    background-color: #ff6600; /* Orange button */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* No underline for links */
+    transition: background-color 0.3s ease, transform 0.3s; /* Smooth transition */
+}
+
+.service-btn:hover {
+    background-color: #cc5200; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center; /* Center align services on smaller screens */
+    }
+
+    .service {
+        margin-bottom: 20px;
+        max-width: 100%; /* Full width on mobile */
+    }
+}
+
+
+     </style>
+
+
+</head>
+<body>
+<header>
+
+    <div class="header">
+        <a href="#" class="logo">
+          <i class="fas fa-paw">&nbsp;</i>Welcome Pet Shop
+        </a>
+      
+        <nav class="navbar">
+          <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i> <!-- Hamburger icon for mobile view -->
+          </div>
+          <div class="nav-menu" id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="shop.php">Shop</a>
+            <a href="services.html">Services</a>
+          </div>
+          <div class="icons">
+            <a href="details.php" class="fas fa-shopping-cart"></a>
+            <a href="login.html" class="fas fa-user"></a>
+          </div>
+        </nav>
+      </div>
+      
+
+
+        <section class="hero">
+            <div class="hero-slider">
+              <div class="hero-slide active">
+                <img src="https://i.ibb.co/Nx13GxY/image.jpg" alt="Hero Image 1">
+              </div>
+              <div class="hero-slide">
+                <img src="https://i.ibb.co/X8L1rBj/blog-1.jpg" alt="Hero Image 2">
+              </div>
+              <div class="hero-slide">
+                <img src="https://i.ibb.co/MNCrKzL/testimonial.jpg" alt="Hero Image 3">
+              </div>
+            </div>
+            <div class="hero-text">
+              <h1>"Bringing Happiness to Your Pets Every Day!"</h1> <br>
+
+              <button class="btn"> <a href="shop.php"> Shop Now </button></a> 
+            </div>
+          </section>
+
+
+
+  </header>
+
+      <section class="about" id="about">
+        <div class="image">
+          <img src="img/dog.jpg" alt="">
+        </div>
+        <div class="content">
+          <h3>ROYAL Then maybe Black Hawk dog food is right for you. 
+            This affordable brand has a fairly clean ingredient list and comes in large bags so you can save even more when buying in bulk. 
+            We know all owners want to give their dogs the best, with their wallet sometimes the only restriction.
+             This brand might provide a budget solution without sacrificing nutritional value.</h3>
+             <br><br><br>
+          <a href="shop.php" class="btn">shop now</a>
+        </div>
+      </section>
+
+
+      <section class="about" id="about">
+        <div class="image">
+          <img src="img/new dog.jpg" alt="">
+        </div>
+        <div class="content">
+          <h3>At Black Hawk, our team of veterinarians and
+             pet nutritionists have developed a range of 
+             recipes designed to support your dog’s health and vitality in every stage of life.
+
+            Using only premium ingredients, our dog foods are proudly 
+            produced in rural New South Wales to the highest standards 
+             help support your puppy and adult dog’s overall health, vitality and wellbeing. Your best friend deserves the best, so that’s what we put into 
+            our dog foods – healthy, Australian ingredients in optimal
+             blends to support your dog’s lifestyle.</h3>
+             <br><br><br>
+          <a href="shop.php" class="btn">shop now</a>
+        </div>
+      </section>
+
+         <section class="about" id="about">
+        <div class="image">
+          <img src="img/home03.jpg" alt="">
+        </div>
+        <div class="content">
+          <h3>Purina Pro Plan distinguishes itself as a superior choice in dog nutrition,
+             tending to a variety of canine requirements. 
+             The selection on offer spans from special formulas 
+             for sensitive skin and stomach to high-calorie, high-protein feeds, 
+             Purina Pro Plan provides customized nutrition for dogs in all stages of life.
+            As we examine more closely the unique aspects that make this brand exceptional based on various Purina Pro Plan reviews and inspect specific product lines crafted for different canine needs, 
+            it becomes clear why this brand steadily earns favor among pet owners worldwide.</h3>
+             <br><br><br>
+          <a href="shop.php" class="btn">shop now</a>
+        </div>
+      </section>
+      
+
+      <section class="about" id="about">
+        <div class="image">
+          <img src="img/home04.jpg" alt="">
+        </div>
+        <div class="content">
+          <h3>Happy Dog has been developed by our own vets and 
+            it's their scientific approach that makes us unique. Every bag is natural,
+             balanced and will provide a great shiny coat and a healthy happy dog. At Happy Dog, our love for canines extends beyond providing high-quality dog food;
+             it's about making a significant difference in the lives of dogs in need.</h3>
+             <br><br><br>
+          <a href="shop.php" class="btn">shop now</a>
+        </div>
+      </section>
+
+      <section class="pricing-section">
+        <h2>Choose A <span>Plan</span></h2>
+       
+        <div class="pricing-plans">
+        
+            <div class="plan-card">
+                <div class="plan-header">
+                    <img src="img/plan-a .png" alt="">
+                
+                    <h3>Pet Care<br>1 Day</h3>
+                </div>
+                <ul class="plan-details">
+                    <li>Pet Room</li>
+                    <li>Pet Grooming</li>
+                    <li>Pet Exercise</li>
+                    <li>Pet Meals</li>
+                </ul>
+                <div class="plan-price">$50</div>
+            </div>
+          
+            <div class="plan-card">
+                <div class="plan-header">
+                    <img src="img/plan-b.png" alt="">
+                    <h3>Pet Care<br>10 Days</h3>
+                </div>
+                <ul class="plan-details">
+                    <li>Pet Room</li>
+                    <li>Pet Grooming</li>
+                    <li>Pet Exercise</li>
+                    <li>Pet Meals</li>
+                    <li>pet training</li>
+                    <li>pet hobbit training</li>
+                </ul>
+                <div class="plan-price">$350</div>
+            </div>
+          
+            <div class="plan-card">
+                <div class="plan-header">
+                    <img src="img/plan-c.png" alt="">
+                    <h3>Pet Care<br>30 Days</h3>
+                </div>
+                <ul class="plan-details">
+                    <li>Pet Room</li>
+                    <li>Pet Grooming</li>
+                    <li>Pet Exercise</li>
+                    <li>Pet Meals</li>
+                    <li>pet training</li>
+                    <li>pet hobbit training</li>
+                    <li>pet veterinary</li>
+
+                </ul>
+                <div class="plan-price">$650</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <h1>Our Services</h1>
+            <div class="service-container">
+                <div class="service">
+                    <div class="service-image">
+                        <img src="https://i.ibb.co/09s446R/f4e302b4-18b9-4678-800c-992d7fdd596d.jpg" alt="Dog Boarding">
+                        <div class="service-details">
+                            <p class="price">$30</p>
+                            <h3>DOG Boarding</h3>
+                            <p>Our dog boarding service ensures a comfortable and safe environment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <div class="service-image">
+                        <img src="https://i.ibb.co/3FYgVjX/844e1d0a-2c08-47f1-bd69-020ad4cb6dc8.jpg" alt="Cat Boarding">
+                        <div class="service-details">
+                            <p class="price">$25</p>
+                            <h3>Cat Boarding</h3>
+                            <p>Our cat boarding service provides a quiet, cozy space for your cat to relax.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <div class="service-image">
+                        <img src="https://i.ibb.co/Z18vqS4/64dc83ee-ff53-4bfe-a98a-e557fe31c694.jpg" alt="Grooming">
+                        <div class="service-details">
+                            <p class="price">$25</p>
+                            <h3>Grooming</h3>
+                            <p>Our grooming services include bathing, nail trimming, and fur styling.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <div class="service-image">
+                        <img src="https://i.ibb.co/mDpr1Tz/253c22e3-0b45-46e5-b0d8-0c981eeaa0a5.jpg" alt="Healthy Meal">
+                        <div class="service-details">
+                            <p class="price">$40-65</p>
+                            <h3>Healthy Meal</h3>
+                            <p>Our healthy meal plans are designed to provide balanced nutrition tailored to your pet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-image">
+                        <img src="https://i.ibb.co/cTJJprw/37f83da6-0d03-4ae9-b615-f7e699e4600e.jpg" alt="Dog training">
+                        <div class="service-details">
+                            <p class="price">$25</p>
+                            <h3>veterinary</h3>
+                            <p>we provide comprehensive veterinary care tailored specifically for your beloved canine companions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-image">
+                        <img src="https://i.ibb.co/bWpnM1t/fc43047b-ebfd-4d20-9a5d-e2d7885ec419.jpg" alt="veterinary">
+                        <div class="service-details">
+                            <p class="price">$25</p>
+                            <h3>Dog Traning</h3>
+                            <p>we offer personalized dog training programs to ensure a happy and 
+                                well-behaved pet. Our expert trainers use positive reinforcement 
+                                techniques .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button class="service-btn">
+                    <a href="services.html">VIEW ALL SERVICES</a>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+            
+
+    
+    
+      <script src="script.js" defer></script>
+      <script>
+        let currentIndex = 0;
+const slides = document.querySelectorAll('.hero-slide');
+
+function showNextSlide() {
+  slides[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % slides.length;
+  slides[currentIndex].classList.add('active');
+}
+
+setInterval(showNextSlide, 5000); 
+
+      </script>
+  </body>
+  
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="home.html">
+                    <img src="img/logo.png" alt="Traveller Logo">
+                </a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="news.html">FAQs</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Information</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 41/B, Colombo, Sri Lanka</li>
+                <li><i class="fas fa-phone-alt"></i> +94 4528 0526 </li>
+                <li><i class="fas fa-envelope"></i> support@petshop.com</li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Pertshop. All rights reserved.</p>
+    </div>
+</footer>
+
+
+  </html>  
+
+
+
+
+
+
+
+    
+
+        
+    
+    
+
+    
+
+
+    

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+   
+<style> 
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Service Details Section */
+.service-details {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.service-details h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-box {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+.service-box img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.content {
+    padding: 20px;
+    flex: 1;
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: #a6e258;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-box img {
+        width: 100%;
+    }
+    
+    .content {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+
+</style>
+<body>
+
+    <header>
+
+        <div class="header">
+            <a href="#" class="logo">
+              <i class="fas fa-paw">&nbsp;</i>Welcome Pet Shop
+            </a>
+          
+            <nav class="navbar">
+              <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i> <!-- Hamburger icon for mobile view -->
+              </div>
+              <div class="nav-menu" id="nav-links">
+                <a href="home.html">Home</a>
+               
+                <a href="services.html">Services</a>
+              </div>
+              <div class="icons">
+                <a href="details.php" class="fas fa-shopping-cart"></a>
+                <a href="login.html" class="fas fa-user"></a>
+              </div>
+            </nav>
+          </div>
+
+    </header>
+
+
+
+
+    <section class="service-details">
+        <div class="container">
+            <h1>Service Details</h1>
+            
+            <!-- Dog Boarding Section -->
+            <div class="service-box" id="dog-boarding">
+                <img src="img/pet-bording.png" alt="Dog Boarding">
+                <div class="content">
+                    <h2>pet Boarding</h2>
+                    <p>Our dog boarding service ensures a comfortable and safe environment for your pet while you're away. With spacious kennels, daily exercise, and attentive staff, we make sure your dog has a pleasant stay with us.</p>
+                </div>
+            </div>
+
+           
+            <!-- Grooming Section -->
+            <div class="service-box" id="grooming">
+                <img src="img/groomimg.png" alt="Grooming">
+                <div class="content">
+                    <h2>Grooming</h2>
+                    <p>Our grooming services include bathing, nail trimming, and fur styling to keep your pet looking and feeling great. We use gentle, pet-safe products tailored to your pet's specific needs.</p>
+                </div>
+            </div>
+
+            <!-- Healthy Meal Section -->
+            <div class="service-box" id="healthy-meal">
+                <img src="img/meal.png" alt="Healthy Meal">
+                <div class="content">
+                    <h2>Healthy Meal</h2>
+                    <p>Our healthy meal plans are designed to provide balanced nutrition tailored to your pet's dietary needs. From fresh ingredients to specially formulated meals, we ensure your pet receives the best diet.</p>
+                </div>
+            </div>
+
+            <!-- Activity Section -->
+            <div class="service-box" id="activity">
+                <img src="img/activity.png" alt="Activity">
+                <div class="content">
+                    <h2>Activity</h2>
+                    <p>Our activity programs include outdoor playtime, exercise routines, and fun activities to keep your pet active and happy. These sessions are customized to suit each pet's energy level and preferences.</p>
+                </div>
+            </div>
+
+            <!-- Health Care Section -->
+            <div class="service-box" id="health-care">
+                <img src="img/pet-care01.png" alt="Health Care">
+                <div class="content">
+                    <h2>Health Care</h2>
+                    <p>Our health care services provide regular check-ups, vaccinations, and preventative care to keep your pet healthy. Our on-site veterinarians are here to ensure your pet's well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js" defer></script>
+</body>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="home.html">
+                    <img src="img/logo.png" alt="Traveller Logo">
+                </a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Information</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Street, Colombo, Sri Lanka</li>
+                <li><i class="fas fa-phone-alt"></i> +94 123 456 789</li>
+                <li><i class="fas fa-envelope"></i> support@traveller.com</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Traveller. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+</html>
